@@ -1,0 +1,157 @@
+/* style.css — 3x3ブロックごとに太線が入る完全版 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.container {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  max-width: 95vw;
+}
+
+h1 {
+  text-align: center;
+  color: #007ACC;
+  margin: 0 0 14px 0;
+  font-size: 1.4rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+button, select {
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+  font-size: 14px;
+}
+
+button:hover, select:hover {
+  background-color: #005F99;
+}
+
+/* --- 盤面（グリッド） --- */
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 45px); /* PC: 45px の正方形セル */
+  grid-template-rows: repeat(9, 45px);
+  gap: 0; /* 隙間があると線が途切れるので 0 に */
+  margin: 8px auto;
+}
+
+/* 各セル（input）共通 */
+.cell {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  border: 1px solid #cccccc; /* デフォルトの薄い格子線 */
+  background-color: #f9f9f9;
+  transition: background-color 0.16s ease, outline 0.12s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* フォーカスしやすく */
+.cell:focus {
+  outline: 2px solid rgba(0,122,204,0.25);
+  background-color: #fff;
+}
+
+/* 初期数字（プレフィルド） */
+.cell.prefilled {
+  background-color: #ececec;
+  font-weight: 700;
+  color: #333;
+}
+
+/* チェック結果の色 */
+.cell.correct {
+  background-color: #C8E6C9;
+}
+.cell.wrong {
+  background-color: #FFCDD2;
+}
+
+/* =======================================================
+   ここからが重要：3×3ブロックごとに太線を入れる指定
+   ======================================================= */
+
+/* 縦の太線（列 1,4,7 の左側） */
+.cell:nth-child(9n+1),
+.cell:nth-child(9n+4),
+.cell:nth-child(9n+7) {
+  border-left: 3px solid #333333;
+}
+
+/* 縦の太線（列 3,6,9 の右側） */
+.cell:nth-child(9n+3),
+.cell:nth-child(9n+6),
+.cell:nth-child(9n) {
+  border-right: 3px solid #333333;
+}
+
+/* 横の太線（行 1,4,7 の上側） */
+.cell:nth-child(-n+9),
+.cell:nth-child(n+28):nth-child(-n+36),
+.cell:nth-child(n+55):nth-child(-n+63) {
+  border-top: 3px solid #333333;
+}
+
+/* 横の太線（行 3,6,9 の下側） */
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54),
+.cell:nth-child(n+73):nth-child(-n+81) {
+  border-bottom: 3px solid #333333;
+}
+
+/* =======================================================
+   レスポンシブ（スマホ向け）：セルを小さくする
+   ======================================================= */
+@media (max-width: 600px) {
+  #board {
+    grid-template-columns: repeat(9, 32px);
+    grid-template-rows: repeat(9, 32px);
+  }
+  .cell {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+  button, select {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+

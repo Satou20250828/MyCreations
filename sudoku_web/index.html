@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ナンプレ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ナンプレ</h1>
+    
+    <div class="controls">
+      <label for="difficulty">難易度:</label>
+      <select id="difficulty">
+        <option value="30">初級</option>
+        <option value="45" selected>中級</option>
+        <option value="55">上級</option>
+      </select>
+      <button id="newPuzzle">新しい問題</button>
+      <button id="solve">解答</button>
+      <button id="check">答えチェック</button>
+    </div>
+
+    <div id="board"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

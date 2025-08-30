@@ -1,0 +1,121 @@
+:root{
+  --bg1:#6a11cb;
+  --bg2:#2575fc;
+  --card:rgba(255,255,255,0.15);
+  --accent:#ff8c00;
+  --muted:#e0e0e0;
+}
+
+body{
+  margin:0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  color:#fff;
+}
+
+.wrap{
+  width:100%;
+  max-width:820px;
+  background: var(--card);
+  border-radius:20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding:28px;
+  backdrop-filter: blur(12px) saturate(180%);
+}
+
+header{
+  text-align:center;
+  margin-bottom:18px;
+}
+.title{
+  font-size:32px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:#fff;
+  text-shadow:0 2px 6px rgba(0,0,0,0.3);
+}
+.subtitle{color:var(--muted);font-size:15px;}
+
+.main{display:grid;grid-template-columns: 1fr 300px;gap:20px;}
+@media (max-width:880px){.main{grid-template-columns:1fr}}
+
+.card{
+  background: rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+}
+
+.result{
+  height:220px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  text-align:center;
+  border-radius:12px;
+  background:rgba(255,255,255,0.1);
+  opacity:0.9;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.result.show{
+  transform:scale(1.05);
+  opacity:1;
+}
+
+.fortune-emoji{font-size:50px}
+.fortune-text{font-size:28px;font-weight:700}
+.fortune-desc{color:var(--muted);font-size:14px}
+
+.btn{
+  padding:12px 20px;
+  background:linear-gradient(90deg,#ff8c00,#ff2d55);
+  color:white;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  margin-right:10px;
+  transition: all 0.25s ease;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+.btn.secondary{
+  background:#fff;
+  color:#333;
+  border:1px solid #eee;
+}
+
+.history{
+  margin-top:12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  max-height:220px;
+  overflow:auto;
+}
+.history-item{
+  background:rgba(255,255,255,0.12);
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:14px;
+  color:#fff;
+}
+
+.note{
+  margin-top:14px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+

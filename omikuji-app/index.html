@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>おみくじ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">おみくじ</div>
+      <div class="subtitle">ボタンを押して今日の運勢を占おう！</div>
+    </header>
+
+    <div class="main">
+      <section class="card">
+        <div id="result" class="result" aria-live="polite" role="status">
+          <div class="fortune-emoji">🎋</div>
+          <div class="fortune-text">ここをタップして運勢を占おう</div>
+          <div class="fortune-desc">あなたにぴったりの一言をお届けします</div>
+        </div>
+
+        <div class="controls">
+          <button id="drawBtn" class="btn">おみくじを引く</button>
+          <button id="resetBtn" class="btn secondary">履歴を消す</button>
+        </div>
+
+        <div class="history" id="history" aria-label="引いたおみくじの履歴"></div>
+
+        <div class="note">※運勢はランダムに決まります。</div>
+      </section>
+
+      <aside class="card">
+        <h4>今日の運勢サマリー</h4>
+        <ul>
+          <li>🌟 大吉 — 今日は何をやってもうまくいきます</li>
+          <li>🌸 中吉 — 小さな幸運がありそう</li>
+          <li>☀️ 小吉 — 穏やかな一日になりそう</li>
+          <li>🍀 末吉 — ゆっくり進めば良い結果に</li>
+          <li>⚠️ 凶 — 慎重に、無理をしないで</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="note">© 2025 Omikuji App</footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  background: #006400; /* カジノっぽい緑 */
+  color: white;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#high-btn {
+  background: #ff4d4d;
+  color: white;
+}
+#low-btn {
+  background: #4d79ff;
+  color: white;
+}
+#reset-btn {
+  background: #ffa500;
+  color: white;
+}
+#retry-btn {
+  background: #32cd32;
+  color: white;
+}
+
+#controls button:hover {
+  opacity: 0.8;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* カード色 */
+.red {
+  color: red;
+}
+.black {
+  color: black;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+

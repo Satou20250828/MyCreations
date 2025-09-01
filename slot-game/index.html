@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>スロット</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">スロット</h1>
+
+    <section class="game">
+      <div class="reels" aria-live="polite" aria-atomic="true">
+        <div class="reel" id="reel1">0</div>
+        <div class="reel" id="reel2">0</div>
+        <div class="reel" id="reel3">0</div>
+      </div>
+
+      <div class="controls">
+        <label for="betSelect" class="bet-label">ベット額：</label>
+        <select id="betSelect" class="bet-select">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select>
+
+        <button id="spinBtn" class="btn">スピン</button>
+        <button id="stopBtn" class="btn secondary" disabled>ストップ</button>
+        <button id="resetBtn" class="btn tertiary">リセット</button>
+      </div>
+
+      <div class="info">
+        <p id="message">遊び方：コインを賭けて3つの数字を揃えよう。揃ったら配当を獲得！</p>
+        <p>所持コイン：<span id="coins">100</span></p>
+        <p>勝利回数：<span id="wins">0</span></p>
+      </div>
+    </section>
+
+    <section class="howto">
+      <h2>遊び方</h2>
+      <ol>
+        <li>ベット額を選んで「スピン」を押すと、その分コインが減ります。</li>
+        <li>「ストップ」を押すと回転が止まり、数字が決まります（自動で止まることもあります）。</li>
+        <li>3つの数字が揃ったら「ベット額 × 5」が戻ってきます。</li>
+        <li>「リセット」で所持コインとスコアを初期化できます。</li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <small>作成：あなたのスロットゲーム</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

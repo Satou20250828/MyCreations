@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>クリックカウンターゲーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>クリックカウンターゲーム</h1>
+    </header>
+
+    <!-- モード切り替え -->
+    <section class="card mode-select">
+      <button id="normalModeBtn" class="btn primary">通常モード</button>
+      <button id="timeAttackBtn" class="btn outline">タイムアタックモード</button>
+    </section>
+
+    <!-- 通常モード -->
+    <section id="normalMode" class="card mode" aria-labelledby="counter-title">
+      <h2 id="counter-title" class="sr-only">カウンター</h2>
+
+      <div class="count-wrap" aria-live="polite" aria-atomic="true">
+        <span class="label">現在のスコア</span>
+        <div id="count" class="count">0</div>
+      </div>
+
+      <div class="buttons">
+        <button id="clickBtn" class="btn primary">クリック！</button>
+        <button id="undoBtn" class="btn outline">−1</button>
+        <button id="resetBtn" class="btn ghost">リセット</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">合計クリック</span>
+          <span id="total" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">自己ベスト</span>
+          <span id="best" class="stat-value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- タイムアタックモード -->
+    <section id="timeAttackMode" class="card mode hidden">
+      <h2>タイムアタック</h2>
+
+      <div class="buttons" style="margin-bottom:12px;">
+        <label for="taSelect">制限時間：</label>
+        <select id="taSelect" class="select">
+          <option value="5">5秒</option>
+          <option value="10" selected>10秒</option>
+          <option value="30">30秒</option>
+        </select>
+      </div>
+
+      <div class="count-wrap">
+        <span class="label">残り時間</span>
+        <div id="timer" class="count">10</div>
+      </div>
+
+      <div class="count-wrap">
+        <span class="label">クリック数</span>
+        <div id="taCount" class="count">0</div>
+      </div>
+
+      <div class="buttons">
+        <button id="taStartBtn" class="btn primary">スタート</button>
+        <button id="taClickBtn" class="btn outline" disabled>クリック！</button>
+        <button id="taResetBtn" class="btn ghost">リセット</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">今回のスコア</span>
+          <span id="taScore" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">ベストスコア</span>
+          <span id="taBest" class="stat-value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 遊び方 -->
+    <section class="howto card">
+      <h2>遊び方</h2>
+      <ol>
+        <li>通常モード：クリックでスコアを増やしたり減らしたりできます。</li>
+        <li>タイムアタックモード：制限時間を選んで、時間内に何回クリックできるか挑戦！</li>
+        <li>スペースキーでも「クリック！」可能です（通常モードのみ）。</li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <small>© 2025 Click Counter</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

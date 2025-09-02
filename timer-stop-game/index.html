@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>タイマーストップゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <header>
+        <div>
+          <h1>タイマーストップゲーム</h1>
+          <div class="subtitle">目標秒数ぴったりで止めろ！</div>
+        </div>
+      </header>
+
+      <div class="main">
+        <div>
+          <!-- 🎯 目標秒数設定 -->
+          <div class="panel" style="margin-bottom:12px">
+            <h3>目標秒数を設定</h3>
+            <div style="display:flex;gap:8px;align-items:center">
+              <input type="number" id="targetSec" value="10" min="1" max="300">
+              <button id="setTargetBtn" class="btn-start">設定</button>
+            </div>
+            <div style="margin-top:6px;font-size:13px;color:#074a6f">
+              現在の目標: <span id="targetDisplay">10 秒</span>
+            </div>
+          </div>
+
+          <!-- ⏱️ タイマー -->
+          <div class="timer-box panel">
+            <div class="time" id="display">00:00.000</div>
+            <div class="ms" id="ms-info">準備完了 — スタートボタンを押すかスペースキー</div>
+
+            <div class="controls">
+              <button class="btn-start" id="startBtn">スタート</button>
+              <button class="btn-stop" id="stopBtn" disabled>ストップ</button>
+              <button class="btn-reset" id="resetBtn">リセット</button>
+            </div>
+
+            <div style="margin-top:14px;text-align:center;font-size:13px;color:#06385a">
+              キーボード: <strong>Space</strong> = スタート/ストップ • <strong>R</strong> = リセット
+            </div>
+          </div>
+
+          <!-- 📖 遊び方 -->
+          <div style="margin-top:14px" class="panel">
+            <h3>遊び方</h3>
+            <div class="instructions">
+              1) 目標秒数を設定して <strong>スタート</strong> ！<br>
+              2) 設定した秒数ぴったりで <strong>ストップ</strong> を押そう。<br>
+              3) 誤差が小さいほど高得点！<br>
+              4) ベストスコアはブラウザに保存されます。
+            </div>
+          </div>
+        </div>
+
+        <!-- 📊 スコア表示 -->
+        <aside>
+          <div class="panel">
+            <h3>今回の得点</h3>
+            <div class="score" id="score">—</div>
+            <div class="meta">
+              <div>誤差: <span id="diff">—</span></div>
+              <div>回数: <span id="rounds">0</span></div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="panel">
+            <h3>ベスト</h3>
+            <div style="text-align:center;font-weight:700;font-size:18px;color:var(--accent)" id="best">—</div>
+            <div style="margin-top:8px;font-size:13px;color:#06385a;text-align:center">ブラウザに記録保存</div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>作り方: VSCodeで開いてブラウザで実行してください。</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

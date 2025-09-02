@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin: 10px;
+}
+
+canvas {
+  border: 2px solid #fff;
+  background: #111;
+}
+
+#score, #highscore {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.instructions {
+  max-width: 400px;
+  margin-top: 20px;
+  font-size: 14px;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+

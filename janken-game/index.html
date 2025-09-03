@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけんゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✨じゃんけんゲーム✨</h1>
+    <p class="hint">CPUと楽しく対戦しよう！</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>好きな手を選んでね</h2>
+      <div class="choices">
+        <button class="choice" data-hand="グー">✊ グー</button>
+        <button class="choice" data-hand="チョキ">✌ チョキ</button>
+        <button class="choice" data-hand="パー">✋ パー</button>
+      </div>
+      
+      <div class="result" id="result">
+        <p>あなたの手: <span id="playerHand">-</span></p>
+        <p>CPUの手: <span id="cpuHand">-</span></p>
+        <p class="outcome" id="outcome">結果がここに表示されます</p>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score win">
+          <div class="label">勝ち</div>
+          <div class="val" id="winScore">0</div>
+        </div>
+        <div class="score lose">
+          <div class="label">負け</div>
+          <div class="val" id="loseScore">0</div>
+        </div>
+        <div class="score draw">
+          <div class="label">引き分け</div>
+          <div class="val" id="drawScore">0</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card instructions">
+      <h2>🎮 遊び方 🎮</h2>
+      <p>
+        1. 「グー」「チョキ」「パー」の中から1つ選んでね！<br>
+        2. CPUもランダムに手を出すよ。<br>
+        3. 勝ち・負け・引き分けが表示されるよ！<br>
+        4. 何回も遊んでスコアを増やそう！<br>
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

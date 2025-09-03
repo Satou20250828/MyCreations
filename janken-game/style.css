@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Yu Gothic", sans-serif;
+  background: linear-gradient(135deg, #f9a8d4, #fcd34d, #93c5fd);
+  color: #333;
+}
+
+header {
+  background: #f472b6;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 4px solid #ec4899;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.hint {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 3px solid #f472b6;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+}
+
+.choices {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.choice {
+  flex: 1;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #60a5fa;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.choice:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f0f9ff;
+  border-radius: 10px;
+  border: 2px dashed #60a5fa;
+}
+
+.outcome {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.score {
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+}
+
+.score.win {
+  background: #22c55e;
+}
+.score.lose {
+  background: #ef4444;
+}
+.score.draw {
+  background: #f59e0b;
+}
+
+.instructions h2 {
+  color: #f472b6;
+}

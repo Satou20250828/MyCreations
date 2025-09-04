@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイピングゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>タイピングゲーム</h1>
+
+  <div id="menu">
+    <label for="mode">モード選択：</label>
+    <select id="mode">
+      <option value="normal">単語モード</option>
+      <option value="sentence">文章モード</option>
+      <option value="aiueo">あいうえお順モード</option>
+    </select>
+    <button id="startBtn">ゲーム開始</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <p id="target">ここに出題されます</p>
+    <input type="text" id="input" placeholder="ここに入力">
+    <p>スコア: <span id="score">0</span></p>
+    <p>残り時間: <span id="time">30</span> 秒</p>
+    <p id="feedback"></p>
+  </div>
+
+  <div id="rules">
+    <h2>🎮 遊び方</h2>
+    <p>1. モードを選んでスタートボタンを押してください。</p>
+    <ul>
+      <li>単語モード：ランダムな単語を入力</li>
+      <li>文章モード：ランダムな短い文章を入力</li>
+      <li>あいうえお順モード：『あいうえお』『かきくけこ』…を順番に入力</li>
+    </ul>
+    <p>2. 単語や文章を打ち終わったら <b>Enterキー</b> を押してください。</p>
+    <p>3. 正解なら +1 点で次の問題へ、不正解なら -1 点で同じ問題を再挑戦。</p>
+    <p>4. 制限時間 30 秒でできるだけ高得点を目指しましょう！</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

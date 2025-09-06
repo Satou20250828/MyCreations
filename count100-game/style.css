@@ -1,0 +1,62 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+#gameArea {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 2px solid #87cefa;
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 300px;
+}
+
+#playerControls button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+  background: #87cefa;
+  color: white;
+  cursor: pointer;
+}
+#playerControls button:hover {
+  background: #4682b4;
+}
+
+#logArea {
+  margin-top: 20px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.rules {
+  margin-top: 40px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff8dc;
+  padding: 15px;
+  border-radius: 8px;
+}

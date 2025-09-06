@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>カウント100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>カウント100</h1>
+
+  <div class="controls">
+    <label>CPU人数:
+      <select id="cpuCount">
+        <option value="1">1人</option>
+        <option value="2">2人</option>
+        <option value="3">3人</option>
+        <option value="4">4人</option>
+        <option value="5">5人</option>
+      </select>
+    </label>
+
+    <label>目標値:
+      <select id="targetValue">
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+      </select>
+    </label>
+
+    <button id="startBtn">ゲーム開始</button>
+    <button id="resetBtn">リセット</button>
+  </div>
+
+  <div id="gameArea">
+    <p>現在の数: <span id="currentNumber">0</span></p>
+    <p>ターン: <span id="turnInfo">-</span></p>
+
+    <div id="playerControls">
+      <button data-count="1">+1</button>
+      <button data-count="2">+2</button>
+      <button data-count="3">+3</button>
+    </div>
+
+    <div id="logArea"></div>
+  </div>
+
+  <div class="rules">
+    <h2>遊び方</h2>
+    <p>
+      プレイヤーは順番に 1〜3 の数字を加えてカウントを進めます。<br>
+      ちょうど <strong>100（または選んだ目標値）</strong> に到達した人が <strong>負け</strong> です。<br>
+      CPU人数は1〜5人まで選択可能。<br>
+      目標値は100 / 200 / 300から選べます。<br>
+      自分以外はすべてCPUです。
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

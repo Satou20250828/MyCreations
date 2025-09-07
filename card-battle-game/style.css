@@ -1,0 +1,89 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f8ff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.game {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.cards {
+  margin: 20px 0;
+}
+
+#player-cards button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #0078d7;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+#player-cards button:hover {
+  background: #005a9e;
+}
+
+#player-cards button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.battle {
+  margin: 20px 0;
+}
+
+#reset-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #e60000;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background: #990000;
+}
+
+.result {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.rules {
+  margin-top: 30px;
+  text-align: left;
+  background: #e6f7ff;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

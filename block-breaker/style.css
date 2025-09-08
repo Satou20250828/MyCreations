@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: #87cefa;
+    display: block;
+    margin: 20px auto;
+}
+
+#gameInfo {
+    margin: 10px;
+}
+
+#retryBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#instructions {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+    background-color: #e6f2ff;
+    padding: 15px;
+    border-radius: 10px;
+}

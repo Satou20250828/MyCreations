@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>反射神経ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>反射神経ゲーム</h1>
+
+    <section class="game-area">
+      <div id="target" class="target waiting" tabindex="0" role="button" aria-live="polite">
+        <div id="targetText" class="target-text">クリックしてスタート</div>
+      </div>
+
+      <div class="info">
+        <div>今回の反応時間: <span id="time">-</span> ms</div>
+        <div>ベスト: <span id="best">-</span> ms</div>
+      </div>
+
+      <div class="controls">
+        <button id="resetBtn">リセット</button>
+        <button id="shareBtn">コピーして共有</button>
+      </div>
+
+      <div class="tips">
+        <h2>遊び方</h2>
+        <p>画面の色がランダムなタイミングで変わったら、できるだけ早く画面をクリック（またはスペースキー）してください。早すぎるクリックは反則（早押し）です。</p>
+        <p>下にスクロールすると詳しい説明と設定があります。</p>
+      </div>
+    </section>
+
+    <section class="more">
+      <h3>詳細と設定</h3>
+      <ul>
+        <li>ランダム遅延: 1000〜3000ms（1〜3秒）</li>
+        <li>早押し時は画面を赤くして再スタートします</li>
+        <li>キーボード: スペースでもクリックできます</li>
+      </ul>
+    </section>
+
+    <footer>
+      <small>作成: あなたの反射神経を測るシンプルなゲーム</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

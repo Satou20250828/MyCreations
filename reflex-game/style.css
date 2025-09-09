@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,'Hiragino Kaku Gothic ProN','メイリオ',sans-serif;
+}
+html,body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f5f7fb;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.game-area {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.06);
+}
+.target {
+  height: 220px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.target.waiting {
+  background: linear-gradient(180deg,#e6eefc,#d3e6ff);
+  color: #0b3b73;
+}
+.target.ready {
+  background: #f7f7f7;
+  color: #333;
+}
+.target.go {
+  background: #6ee186;
+  color: #073b16;
+}
+.target.early {
+  background: #ff8a8a;
+  color: #5b0000;
+}
+.target-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 16px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+}
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+button:hover {
+  transform: translateY(-1px);
+}
+.tips {
+  margin-top: 14px;
+  color: #444;
+}
+.more {
+  margin-top: 18px;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  margin-top: 12px;
+  color: #888;
+}
+@media(max-width:480px) {
+  .target { height: 180px; }
+  .target-text { font-size: 16px; }
+}

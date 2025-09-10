@@ -1,0 +1,60 @@
+:root {
+  --blue: #0b63d6;
+  --bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--blue);
+  font-family: sans-serif;
+}
+
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 32px;   /* ← タイトルも少し大きめに */
+  margin-bottom: 15px;
+}
+
+.time {
+  font-size: 80px;   /* ← 数字を大きく */
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 2px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 18px;   /* ← ボタンの文字も大きめに */
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--blue);
+  color: #fff;
+}

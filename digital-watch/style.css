@@ -1,0 +1,45 @@
+:root{
+  --bg: #ffffff; /* 白 */
+  --text: #0b5cff; /* 青 */
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  background:var(--bg);
+  font-family: 'Segoe UI', Roboto, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif;
+}
+.wrap{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+.clock-box{
+  text-align:center;
+}
+.clock{
+  color:var(--text);
+  font-weight:700;
+  font-size:12vw; /* 時間は大きく */
+  letter-spacing:0.02em;
+  user-select:none;
+}
+.date{
+  color:var(--text);
+  font-weight:500;
+  font-size:4vw; /* 日付と曜日は小さめ */
+  margin-bottom:0.5em;
+}
+@media (max-width:420px){
+  .clock{font-size:18vw}
+  .date{font-size:6vw}
+}
+.info{
+  position:fixed;
+  bottom:8px;
+  left:8px;
+  font-size:12px;
+  color:#666;
+}

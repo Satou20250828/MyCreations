@@ -1,0 +1,67 @@
+:root {
+  --size: min(18vmin,120px);
+  --gap: 18px;
+  font-family: system-ui, "Segoe UI", Roboto, "Yu Gothic", Meiryo, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7fafc;
+  color: #111;
+}
+
+.wrap { width: min(760px,92vw); }
+header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px }
+h1 { font-size:clamp(18px,4vw,28px); margin:0 }
+.controls { display:flex; gap:8px; align-items:center }
+button.control { padding:10px 14px; border-radius:10px; border:1px solid #ddd; background:white; cursor:pointer }
+
+.board {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:var(--gap);
+  justify-items:center;
+}
+
+.pad {
+  width:var(--size);
+  height:var(--size);
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:18px;
+  color:rgba(255,255,255,0.95);
+  user-select:none;
+  cursor:pointer;
+  box-shadow:0 6px 10px rgba(18,18,18,0.08);
+  transition:transform .08s ease;
+}
+.pad:active { transform:scale(.98) }
+.pad.flash {
+  filter:brightness(1.35) saturate(1.05);
+  box-shadow:0 12px 22px rgba(0,0,0,0.15);
+  transform:scale(1.04);
+}
+
+/* ボタンごとに色を変える */
+.pad[data-id="0"] { background:#ff595e }
+.pad[data-id="1"] { background:#ffca3a }
+.pad[data-id="2"] { background:#8ac926 }
+.pad[data-id="3"] { background:#1982c4 }
+
+.status { margin-top:14px; display:flex; align-items:center; gap:12px }
+.message { min-width:160px; padding:8px 12px; border-radius:10px; background:#fff; border:1px solid #eee; }
+.message.correct { border-color:#8ac926; color:#2b6e0b }
+.message.wrong { border-color:#ff595e; color:#7a1212 }
+.small { font-size:13px; color:#666 }
+footer { margin-top:18px; font-size:13px; color:#666 }
+.option { display:flex; gap:8px; align-items:center }
+input[type=checkbox]{width:16px;height:16px}
+
+@media (max-width:480px){:root{--size:22vmin}}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>記憶力ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>記憶力ゲーム</h1>
+      <div class="controls">
+        <button id="startBtn" class="control">スタート</button>
+        <button id="strictBtn" class="control">連続ミスでリセット: OFF</button>
+      </div>
+    </header>
+
+    <div class="board" id="board">
+      <div class="pad" data-id="0">1</div>
+      <div class="pad" data-id="1">2</div>
+      <div class="pad" data-id="2">3</div>
+      <div class="pad" data-id="3">4</div>
+    </div>
+
+    <div class="status">
+      <div class="message" id="level">レベル: 0</div>
+      <div class="message" id="result">準備中</div>
+      <div class="option small">
+        <label><input type="checkbox" id="showAns" checked> 正誤を分かりやすく表示</label>
+      </div>
+    </div>
+
+    <footer>
+      ボタンが光る順番を覚えて、同じ順序でクリックしてください。<br>
+      正解なら「正解！」、不正解なら「不正解！」を表示します。
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

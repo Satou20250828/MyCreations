@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ハノイの塔</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ハノイの塔</h1>
+  <p>ルール: 一度に動かせるのは1枚、大小の順序を守って移動してください。</p>
+
+  <div class="controls">
+    <label>
+      ディスク枚数：
+      <input type="number" id="diskCount" value="3" min="1" max="10">
+    </label>
+    <button id="start">スタート</button>
+    <button id="reset">リセット</button>
+  </div>
+
+  <p id="info"></p>
+
+  <div id="game">
+    <div class="peg" id="peg1"></div>
+    <div class="peg" id="peg2"></div>
+    <div class="peg" id="peg3"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

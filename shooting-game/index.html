@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>的当てゲーム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>的当てゲーム</h1>
+    <div class="hud">
+      <span id="score">Score: 0</span>
+      <span id="remaining">Targets: 0</span>
+    </div>
+  </header>
+
+  <main>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+    <section class="instructions">
+      <h2>操作方法</h2>
+      <ul>
+        <li>← → キー : 移動</li>
+        <li>スペースキー : 弾を発射</li>
+        <li>マウスクリック : 弾を発射</li>
+        <li>「リスタート」ボタン : ゲームをやり直す</li>
+      </ul>
+    </section>
+
+    <div class="controls">
+      <button id="restartBtn">リスタート</button>
+    </div>
+
+    <div id="message" class="message hidden"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

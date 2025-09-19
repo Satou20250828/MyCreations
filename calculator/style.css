@@ -1,0 +1,46 @@
+:root{
+  --bg:#0f1724;
+  --panel:#1e293b;
+  --button:#e6eef8;
+  --accent:#60a5fa;
+  --muted:#94a3b8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Yu Gothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background:linear-gradient(180deg,var(--bg),#081021);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  color:var(--button);
+}
+.calculator{
+  width:340px;
+  background:var(--panel);
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(2,6,23,.6);
+  padding:16px;
+}
+.display{background:rgba(255,255,255,0.03);border-radius:10px;padding:12px;margin-bottom:12px}
+.history{font-size:12px;color:var(--muted);height:18px;overflow:hidden;text-overflow:ellipsis}
+.output{width:100%;background:transparent;border:0;color:var(--button);font-size:28px;text-align:right;padding:6px 0;outline:none}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.key{
+  border:0;padding:16px;border-radius:10px;font-size:18px;
+  background:linear-gradient(180deg,#f8fafc,#e6eef8);
+  color:#0b1220;cursor:pointer;
+  box-shadow:0 4px 0 rgba(11,18,32,.12);
+}
+.key:active{transform:translateY(2px);box-shadow:none}
+.key.operator{background:linear-gradient(180deg,var(--accent),#3b82f6);color:white}
+.key.wide{grid-column:span 2}
+.equals{grid-column:span 1;background:linear-gradient(180deg,#10b981,#059669);color:white}
+.hint{margin-top:10px;font-size:12px;color:var(--muted);text-align:center}
+
+@media (max-width:380px){
+  .calculator{width:100%;}
+  .key{padding:12px}
+}

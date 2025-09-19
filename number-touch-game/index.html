@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>数字タッチゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>数字タッチゲーム</h1>
+
+  <div id="controls">
+    <label for="difficulty">難易度：</label>
+    <select id="difficulty">
+      <option value="9">かんたん (1〜9)</option>
+      <option value="16">ふつう (1〜16)</option>
+      <option value="25">むずかしい (1〜25)</option>
+    </select>
+    <button id="startBtn">スタート</button>
+  </div>
+
+  <p id="message">難易度を選んでスタート！</p>
+  <p id="timer">時間：0.00 秒</p>
+
+  <div id="game"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

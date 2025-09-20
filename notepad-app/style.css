@@ -1,0 +1,151 @@
+/* ベーシックで見やすいスタイル */
+:root{
+  --bg:#f7f7fb;
+  --panel:#ffffff;
+  --accent:#3b82f6;
+  --danger:#ef4444;
+  --muted:#666;
+  --shadow: 0 4px 12px rgba(20,20,40,0.06);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.app{
+  width:100%;
+  max-width:1100px;
+  background:transparent;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+header h1{margin:0;font-size:1.25rem}
+.tools{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.tools input[type="search"]{
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  min-width:200px;
+}
+
+.tools button{
+  padding:8px 10px;
+  border-radius:8px;
+  border:0;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+  box-shadow:var(--shadow);
+}
+
+.tools button.secondary{
+  background:#6b7280;
+}
+
+main{
+  display:flex;
+  gap:16px;
+  background:var(--panel);
+  padding:16px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* サイドバー */
+.sidebar{
+  width:300px;
+  max-height:64vh;
+  overflow:auto;
+  border-right:1px solid #eee;
+  padding-right:12px;
+}
+#notesList{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.note-item{
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+.note-item:hover{background:#fbfdff}
+.note-item.active{
+  background:linear-gradient(90deg, #eef6ff, #ffffff);
+  border-color:#dbeafe;
+}
+.note-title{font-weight:600}
+.note-meta{font-size:12px;color:var(--muted)}
+
+/* エディタ */
+.editor{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+#titleInput{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:1rem;
+}
+#contentInput{
+  flex:1;
+  min-height:300px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  resize:vertical;
+  font-size:0.975rem;
+  line-height:1.5;
+}
+
+.editor-actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.buttons button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+}
+#saveBtn{background:var(--accent); color:white}
+#deleteBtn{background:var(--danger); color:white}
+
+footer{ text-align:right; color:var(--muted); font-size:12px; padding-right:6px; }
+
+/* レスポンシブ */
+@media (max-width:800px){
+  main{flex-direction:column}
+  .sidebar{width:100%; max-height:180px; border-right:0; border-bottom:1px solid #eee; padding-bottom:12px}
+}

@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 上から配置 */
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-height: 80vh; /* 画面の8割まで表示 */
+  overflow-y: auto;  /* はみ出したらスクロール */
+}
+
+h1 {
+  text-align: center;
+}
+
+.word-item {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.word-item span {
+  flex: 1;
+}
+
+.word-item button {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.word-item button.edit {
+  background: #ffc107;
+  color: #fff;
+}
+
+.word-item button.delete {
+  background: #f44336;
+  color: #fff;
+}
+
+.form {
+  margin-top: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}

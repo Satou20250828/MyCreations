@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>数字推理ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>数字推理ゲーム</h1>
+
+    <section class="controls">
+      <div class="difficulty-buttons">
+        <button class="difficulty-btn selected" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="normal">Normal</button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+      </div>
+
+      <button id="newGameBtn" class="new-game-btn">New Game</button>
+    </section>
+
+    <section class="play">
+      <form id="guessForm" autocomplete="off">
+        <input id="guessInput" type="text" inputmode="numeric"
+          placeholder="e.g. 742" aria-label="Enter your guess" />
+        <button type="submit">Guess</button>
+      </form>
+
+      <div id="message" role="status" aria-live="polite"></div>
+
+      <div class="history-wrap">
+        <h2>History</h2>
+        <ul id="history" class="history"></ul>
+      </div>
+    </section>
+
+    <footer>
+      <small>ルール：同じ数字は2回使えません。正しい桁と位置→HIT、数字はあるが位置違い→NEAR。</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
